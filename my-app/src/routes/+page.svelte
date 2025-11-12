@@ -1,10 +1,24 @@
 <script>
-  let title = "Taiwan Journey";
+import Header from "../components/Header.svelte";
+
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-</svelte:head>
+<!-- <svelte:head>
+  <title>"Taiwan Journey"</title>
+</svelte:head> -->
 
-<h1>{title}</h1>
-<p>Bienvenue sur mon application de voyage à travers Taïwan 🇹🇼</p>
+  <Header />
+  
+  <main class="main">
+Ceci est mon main
+  </main>
+
+  <footer class="footer">
+    Ceci est mon footer
+  </footer>
+
+
+
+<style>
+
+</style>
