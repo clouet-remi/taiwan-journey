@@ -27,7 +27,7 @@
         background-image: url(/img/taipei-palace.jpg);
         background-size: cover;
         background-position: 50% 70%;
-        padding: 0rem 2rem 1rem 2rem; 
+        padding: 0rem 1rem 1rem 1rem; 
     }
 
     .header__group {
@@ -45,9 +45,9 @@
     }
 
     .header__title {
-        font-size: 5rem;
+        font-size: 3rem;
         text-align: start;
-        color: var(--main-theme-color);
+        color: var(--light-color);
         text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
     }
 
@@ -64,7 +64,7 @@
         align-items: center;
         margin: 0 auto; 
         background-color: var(--main-theme-color);
-        padding: 0.5rem; 
+        padding: var(--base-padding);
         border-radius: var(--base-border-radius);
     }
 

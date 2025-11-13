@@ -1,5 +1,6 @@
 <script>
 import Header from "../components/Header.svelte";
+import StudyTaiwan from "../components/StudyTaiwan.svelte";
 
 </script>
 
@@ -10,7 +11,7 @@ import Header from "../components/Header.svelte";
   <Header />
   
   <main class="main">
-Ceci est mon main
+<StudyTaiwan/>
   </main>
 
   <footer class="footer">
