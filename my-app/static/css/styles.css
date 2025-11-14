@@ -13,11 +13,12 @@
 
 body {
     max-width: 1920px;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--font-color);
 }
 
 
 .main {
     display: flex;
+    padding: var(--base-padding);
 }

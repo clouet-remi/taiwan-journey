@@ -64,7 +64,7 @@
         align-items: center;
         margin: 0 auto; 
         background-color: var(--main-theme-color);
-        padding: var(--base-padding);
+        padding: 0.5rem 0.5rem 0.5rem 1rem; 
         border-radius: var(--base-border-radius);
     }
 
