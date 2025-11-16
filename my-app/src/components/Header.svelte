@@ -8,7 +8,6 @@
         <img src="/img/logo-taipei-journey.png" alt="Logo de Taipei Journey" class="header__logo">
         <h1 class="header__title">Taiwan Journey</h1>
     </div>
-    <a href="#" class="header__contact">Contact us</a>
     <nav class="header__nav">
         <a href="#" class="header__navlink">Our schools</a>
         <a href="#" class="header__navlink">Accomodations</a>
@@ -24,10 +23,8 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-image: url(/img/taipei-palace.jpg);
-        background-size: cover;
-        background-position: 50% 70%;
         padding: 0rem 1rem 1rem 1rem; 
+        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
 
     .header__group {
@@ -38,21 +35,18 @@
     }
 
     .header__logo {
-        width: 5rem;
         height: 5rem;
-        aspect-ratio: 1/1;
         border-radius: 50%;
     }
 
     .header__title {
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: start;
-        color: var(--light-color);
+        color: var(--main-theme-color);
         text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
     }
 
-    .header__nav a,
-    .header__contact {
+    .header__nav a {
         text-decoration: none;
         color: var(--light-color)
     }
@@ -74,16 +68,7 @@
         border-radius: 50%;
     }
 
-    .header__contact {
-        align-self: flex-end;
-        justify-content: center;
-        text-align: center;
-        width: 8rem;
-        color: var(--font-color);
-        background-color: var(--light-color);
-        padding: var(--base-padding); 
-        border-radius: var(--base-border-radius);
-    }
+
 
 
 </style>
