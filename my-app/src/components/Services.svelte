@@ -83,21 +83,15 @@
 }
 
 .services__text-hidden {
-    /* Afin de bien centrer mon texte, utile pour le texte court de Poulpy */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: color-mix(in srgb, var(--main-theme-color) 60%, transparent);
     font-style: italic;
-    position: absolute;
-    top: 0;
-    /* Décalle mon élément en haut afin de la cacher avec overflow: hidden */
-    transform: translateY(-250%);
-    /* Ajoute une transition plus douce */
+    bottom: top: 0;
+    transform: translateY(500%);
     transition: transform 0.5s ease;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-    min-height: 1.5rem;
+}
+
+.services__article:hover .services__text-hidden {
+    transform: translateY(0);
 }
 
 
