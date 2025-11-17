@@ -86,7 +86,18 @@
         text-decoration: none;
         color: var(--light-color);
         text-align: center;
+        cursor: pointer;
+        transition: 
+        transform 0.3s ease, 
+        background-color: 0.3s ease, 
+        font-weight: 0.3s ease; 
     }
 
+.study__contact:hover, 
+.study__apply:hover {
+    background-color: var(--font-color);
+    font-weight: bold;
+    transform: scale(1.05);
+}
 
 </style>
