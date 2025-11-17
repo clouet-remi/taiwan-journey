@@ -30,7 +30,6 @@
     gap: 1rem;
     flex-direction: column;
     width: 50%;
-    border: solid 1px red;
     padding: 1rem;
 }
 
