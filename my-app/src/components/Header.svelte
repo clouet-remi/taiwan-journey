@@ -46,11 +46,6 @@
         text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
     }
 
-    .header__nav a {
-        text-decoration: none;
-        color: var(--light-color)
-    }
-
     .header__nav {
         display: flex;
         width: 70%;
@@ -62,11 +57,53 @@
         border-radius: var(--base-border-radius);
     }
 
+    
+    .header__nav a {
+        position: relative;
+        display: inline-block; /* Prendra ainsi le padding pour tout le bloc */
+        align-items: center;
+        color: var(--light-color);
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--base-border-radius);
+    }
+    
+    .header__nav a:after {
+        position: absolute;
+        content: "|";
+        right: -4rem;
+        /* Pour bien le centrer et l'aligner avec mes liens */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+    }
+    
+    .header__nav a:hover {
+        background-color: var(--light-color);
+        color: var(--font-color);
+    }
+    
+    .header__nav a:last-child::after,
+    .header__nav a:nth-last-child(2)::after {
+        content: "";
+        margin: 0%;
+    }
+
     .header__navlink-search {
         background-color: var(--light-color);
         padding: var(--base-padding);
         border-radius: 50%;
+        padding: 0.5rem !important;
+        transition: background-color 0.3s, color 0.3s;
     }
+
+    .header__navlink-search:hover {
+        color: var(--font-color);
+    }
+
+
+
 
 
 
