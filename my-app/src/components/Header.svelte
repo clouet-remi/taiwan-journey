@@ -5,7 +5,9 @@
 
 <header class="header">
     <div class="header__group">
-        <img src="/img/logo-taipei-journey.png" alt="Logo de Taipei Journey" class="header__logo">
+        <a href="/" class="header__link">
+            <img src="/img/logo-taipei-journey.png" alt="Logo de Taipei Journey" class="header__logo">
+        </a>
         <h1 class="header__title">Taiwan Journey</h1>
     </div>
     <nav class="header__nav">

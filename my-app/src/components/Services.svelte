@@ -84,8 +84,8 @@
 }
 
 .services__title {
-    background-color: color-mix(in srgb, var(--main-theme-color) 60%, transparent);
-    border-radius: 1.5rem 1.5rem 0 0 ;
+    background-color: color-mix(in srgb, var(--main-theme-color) 90%, transparent);
+    border-radius: 1rem 1rem 0 0;
 }
 
 .services__title-text {
