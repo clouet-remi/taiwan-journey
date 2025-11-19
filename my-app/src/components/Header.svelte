@@ -14,7 +14,7 @@
         <a href="#" class="header__navlink">Activities</a>
         <a href="#" class="header__navlink">About us</a>
         <a href="#" class="header__navlink-search">
-<Icon icon="lucide:search" width="24" height="24"  style="color: #000" />        </a>
+<Icon icon="lucide:search" width="24" height="24" />        </a>
     </nav>
 </header>
 
@@ -48,58 +48,48 @@
 
     .header__nav {
         display: flex;
-        width: 70%;
         justify-content: space-between;
         align-items: center;
+        width: 70%;
         margin: 0 auto; 
         background-color: var(--main-theme-color);
-        padding: 0.5rem 0.5rem 0.5rem 1rem; 
+        padding: 0.5rem 1rem; 
         border-radius: var(--base-border-radius);
+        gap: 1rem;
     }
 
     
-    .header__nav a {
+    .header__navlink {
         position: relative;
-        display: inline-block; /* Prendra ainsi le padding pour tout le bloc */
+        display: inline-flex;
         align-items: center;
         color: var(--light-color);
-        transition: background-color 0.3s, color 0.3s;
         text-decoration: none;
         padding: 0.5rem 1rem;
         border-radius: var(--base-border-radius);
+        transition: background-color 0.3s, color 0.3s;
     }
     
-    .header__nav a:after {
-        position: absolute;
-        content: "|";
-        right: -4rem;
-        /* Pour bien le centrer et l'aligner avec mes liens */
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-    }
-    
-    .header__nav a:hover {
+    .header__navlink:hover {
         background-color: var(--light-color);
         color: var(--font-color);
-    }
-    
-    .header__nav a:last-child::after,
-    .header__nav a:nth-last-child(2)::after {
-        content: "";
-        margin: 0%;
     }
 
     .header__navlink-search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: var(--light-color);
         padding: var(--base-padding);
         border-radius: 50%;
-        padding: 0.5rem !important;
-        transition: background-color 0.3s, color 0.3s;
+        padding: 0.5rem ;
+        color: var(--font-color);
+        transition: color 0.3s;
     }
 
     .header__navlink-search:hover {
-        color: var(--font-color);
+        color: var(--main-theme-color);
+        transform: scale(1.1);        
     }
 
 
