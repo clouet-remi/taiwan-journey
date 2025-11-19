@@ -27,8 +27,30 @@ footer {
 }
 
 .footer__navlink {
+    position: relative;
+    display: inline-flex;
     text-decoration: none;
     color: var(--light-color);
+    padding: var(--base-padding);
+}
+
+.footer__navlink::after {
+    content: ""; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--light-color);
+    border-radius: 3px;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.footer__navlink:hover::after {
+    transform: scaleX(1);
 }
 
 .footer__copyright {
