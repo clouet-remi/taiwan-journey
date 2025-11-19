@@ -1,8 +1,8 @@
 <script>
 import Header from "../components/Header.svelte";
-    import Services from "../components/Services.svelte";
-import LearnChinese from "../components/Services.svelte";
+import Services from "../components/Services.svelte";
 import StudyTaiwan from "../components/StudyTaiwan.svelte";
+import Footer from "../components/Footer.svelte";
 
 </script>
 
@@ -16,10 +16,7 @@ import StudyTaiwan from "../components/StudyTaiwan.svelte";
 <StudyTaiwan/>
 <Services/>
   </main>
-
-  <footer class="footer">
-    Ceci est mon footer
-  </footer>
+<Footer />
 
 
 
