@@ -1,38 +1,25 @@
 <script>
-
+import { activitiesData } from "../data/activitiesData";
 
 </script>
 
 <section class="activities">
     <h3 class="activities__title">Les activités les plus populaires</h3>
+    
+    {#each activitiesData as activity}
     <a href="#" target="_blank" class="activity__link">
         <article class="activity">
-            <img src="/img/activities/hot-spring.jpg" alt="" class="activity__img">
-            <h4 class="activity__title">Find in love with our secret hotsprings</h4>
-            <p class="acitivity__price">Starting from 35$</p>
+            <div class="activity__img-wrapper">
+                <img src={activity.img} alt="" class="activity__img">
+            </div>
+            <div class="activity__text">
+                <h4 class="activity__text--title">{activity.title}</h4>
+                <p class="activity__text--price">Starting from {activity.price}$</p>
+            </div>
         </article>
     </a>
-    <a href="#" target="_blank" class="activity__link">
-        <article class="activity">
-            <img src="/img/activities/taiwan-temple.jpg" alt="" class="activity__img">
-            <h4 class="activity__title">Meditation in a remote temple</h4>
-            <p class="acitivity__price">Starting from 99.9$</p>
-        </article>
-    </a>
-    <a href="#" target="_blank" class="activity__link">
-        <article class="activity">
-            <img src="/img/activities/tea-ceremony.jpg" alt="" class="activity__img">
-            <h4 class="activity__title">Tea Ceremony</h4>
-            <p class="acitivity__price">Starting from 60$</p>
-        </article>
-    </a>
-    <a href="#" target="_blank" class="activity__link">
-        <article class="activity">
-            <img src="/img/activities/hiking-taiwan.jpg" alt="" class="activity__img">
-            <h4 class="activity__title">Hiking in the central mountains</h4>
-            <p class="acitivity__price">Starting from 150$</p>
-        </article>
-    </a>
+    {/each}
+
 </section>
 
 
@@ -53,18 +40,39 @@
 
 .activities__title {
     width: 100%;
+    padding: var(--base-padding);
 }
 
 .activity__link {
     padding: var(--base-padding);
-    width: 20%;
+    width: 25%;
+}
+
+.activity__img-wrapper {
+    height: 8rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--base-border-radius);
 }
 
 .activity__img {
-border-radius: var(--base-border-radius);
-height: 10rem;
-width: 100%;
-object-fit: cover;
+    width: 100%;
+}
+
+.activity__text {
+    font-size: 1rem;
+    padding: var(--base-padding);
+}
+
+
+.activity__text--title {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.activity__text--price {
+    color: var(--main-theme-color);
+    font-style: italic;
 }
 
 </style>
