@@ -1,9 +1,6 @@
 <script>
-import Header from "../components/Header.svelte";
-import Services from "../components/Services.svelte";
-import StudyTaiwan from "../components/StudyTaiwan.svelte";
-import Activities from "../components/Activities.svelte";
-import Footer from "../components/Footer.svelte";
+// '$lib' représente le chemin absolu dans SvelteKit
+import {Header, Footer, Services, StudyTaiwan, Activities } from "$lib";
 
 </script>
 
