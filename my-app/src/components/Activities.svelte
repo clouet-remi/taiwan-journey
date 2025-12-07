@@ -1,107 +1,234 @@
 <script>
-import { activitiesData } from "../data/activitiesData";
+    import { activitiesData } from "../data/activitiesData";
+
+    let track;
+    let firstCard;
+    let currentIndex = $state(0);
+    let cardWidth = $state(0); 
+    let gap = $state(0); 
+    
+    $effect(() => {
+        if (!track) return; 
+
+        const style = getComputedStyle(track); 
+        gap = parseFloat(style.gap) || 0; 
+
+        const update = () => {
+            // offsetWidth pour récupérer la largeur réelle visible à l'écran
+            cardWidth = firstCard.offsetWidth; 
+        };
+
+        update(); 
+
+        // "Surveille l'élém firstCard et s'il est modifié appelle ma fonction update"
+        const resizeObserver = new ResizeObserver(update); 
+        resizeObserver.observe(firstCard);
+
+        return () => resizeObserver.disconnect(); 
+    })
+
+    function displayNextCard() {
+        if (currentIndex < activitiesData.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        scroll();
+    }
+
+    function displayPrevCard() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = activitiesData.length - 1;
+        }
+        scroll();
+    }
+
+    function scroll() {
+        track.scrollTo({
+            left: currentIndex * (cardWidth + gap),
+            behavior: "smooth",
+        });
+    }
+
+    function goToIndex(index) {
+        currentIndex = index;
+        scroll();
+    }
 
 </script>
 
 <section class="activities">
     <h3 class="activities__title">Les activités les plus populaires</h3>
-    
-    {#each activitiesData as activity}
-    <a href="#" target="_blank" class="activity__link">
-        <article class="activity">
-            <div class="activity__img--wrapper">
-                <img src={activity.img} alt="" class="activity__img">
-            </div>
-            <div class="activity__text">
-                <h4 class="activity__text--title">{activity.title}</h4>
-                <p class="activity__text--price">Starting from {activity.price}$</p>
-            </div>
-        </article>
-    </a>
-    {/each}
 
+    <div class="carousel__controls">
+        <button on:click={displayPrevCard}>←</button>
+        <button on:click={displayNextCard}>→</button>
+    </div>
+
+    <div class="activities__wrapper">
+        <div class="activities__track" bind:this={track}>
+            {#each activitiesData as activity, index}
+                <a href="#" target="_blank" 
+                class="activity__link"
+                bind:this={firstCard}
+                >
+                    <article class="activity">
+                        <div class="activity__img--wrapper">
+                            <img
+                                src={activity.img}
+                                alt=""
+                                class="activity__img"
+                            />
+                        </div>
+                        <div class="activity__text">
+                            <h4 class="activity__text--title">
+                                {activity.title}
+                            </h4>
+                            <p class="activity__text--price">
+                                Starting from {activity.price}$
+                            </p>
+                        </div>
+                    </article>
+                </a>
+            {/each}
+        </div>
+    </div>
+
+    <div class="carousel__dots">
+        {#each activitiesData as activity, index}
+            <span
+                class:active={index === currentIndex}
+                on:click={() => goToIndex(index)}
+            ></span>
+        {/each}
+    </div>
 </section>
 
-
 <style>
+    .activities__wrapper {
+        overflow: hidden;
+        width: 100%;
+    }
 
-.activities {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    color: var(--main-theme-color);
-    padding: var(--base-padding);
-    font-size: 1.2rem;
-}
+    .activities__track {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
 
-.activities a {
-    text-decoration: none;
-}
+    .activities {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        color: var(--main-theme-color);
+        padding: var(--base-padding);
+        font-size: 1.2rem;
+    }
 
-.activities__title {
-    width: 100%;
-    padding: var(--base-padding);
-}
+    .activities a {
+        text-decoration: none;
+    }
 
-.activity__link {
-    padding: var(--base-padding);
-    width: 25%;
-}
+    .activity__link {
+        width: 20%;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        padding: var(--base-padding);
+    }
 
-.activity__img--wrapper {
-    height: 8rem;
-    width: 100%;
-    overflow: hidden;
-    border-radius: var(--base-border-radius);
-    transition: transform 0.3s ease; 
-}
+    .activities__title {
+        width: 100%;
+        padding: var(--base-padding);
+    }
 
-.activity__img {
-    width: 100%;
-}
+    .activity__img--wrapper {
+        height: 8rem;
+        width: 100%;
+        overflow: hidden;
+        border-radius: var(--base-border-radius);
+        transition: transform 0.3s ease;
+    }
 
-.activity__text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 1rem;
-    padding: var(--base-padding);
-}
+    .activity__img {
+        width: 100%;
+    }
 
+    .activity__text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 1rem;
+        padding: var(--base-padding);
+    }
 
-.activity__text--title {
-    position: relative;
-    text-decoration: none;
-    color: var(--font-color);
-}
+    .activity__text--title {
+        position: relative;
+        text-decoration: none;
+        color: var(--font-color);
+    }
 
-.activity__text--title::after {
-    content: ""; 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--font-color);
-    border-radius: 3px;
+    .activity__text--title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--font-color);
+        border-radius: 3px;
 
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.2s ease;
-}
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.2s ease;
+    }
 
-.activity__link:hover 
-.activity__text--title::after {
-    transform: scaleX(1);
-}
+    .activity__link:hover .activity__text--title::after {
+        transform: scaleX(1);
+    }
 
-.activity__link:hover .activity__img--wrapper {
-    transform: scale(1.05);
-}
+    .activity__link:hover .activity__img--wrapper {
+        transform: scale(1.05);
+    }
 
-.activity__text--price {
-    color: var(--main-theme-color);
-    font-style: italic;
-}
+    .activity__text--price {
+        color: var(--main-theme-color);
+        font-style: italic;
+    }
 
+    .carousel__controls {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .carousel__controls button {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: none;
+        background-color: var(--main-theme-color);
+        color: white;
+        cursor: pointer;
+    }
+
+    .carousel__dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 0.5rem;
+    }
+
+    .carousel__dots span {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .carousel__dots span.active {
+        background: var(--main-theme-color);
+    }
 </style>
