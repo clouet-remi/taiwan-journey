@@ -1,5 +1,6 @@
 <script>
     import { activitiesData } from "../data/activitiesData";
+    import Icon from "@iconify/svelte";
 
     let track;
     let firstCard;
@@ -62,8 +63,11 @@
     <h3 class="activities__title">Les activités les plus populaires</h3>
 
     <div class="carousel__controls">
-        <button onclick={displayPrevCard}>←</button>
-        <button onclick={displayNextCard}>→</button>
+        <button onclick={displayPrevCard}>
+            <Icon
+                icon="material-symbols:arrow-circle-left-outline-rounded"/></button>
+        <button onclick={displayNextCard}>
+            <Icon icon="material-symbols:arrow-circle-right-outline" /></button>
     </div>
 
     <div class="activities__wrapper">
@@ -201,18 +205,22 @@
 
     .carousel__controls {
         display: flex;
-        justify-content: flex-end;
+        margin-left: auto;
         gap: 1rem;
         margin-bottom: 1rem;
     }
 
     .carousel__controls button {
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: none;
-        background-color: var(--main-theme-color);
-        color: white;
+        border-radius: 50%;
         cursor: pointer;
+        background-color: var(--main-theme-color);
+        color: var(--light-color);
+        height: 2rem;
+        width: 2rem;
     }
 
     .carousel__dots {
@@ -231,7 +239,7 @@
         cursor: pointer;
     }
 
-    .carousel__dots span.active {
+    .carousel__dots button.active {
         background: var(--main-theme-color);
     }
 </style>
