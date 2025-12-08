@@ -90,7 +90,7 @@
         transition: 
         transform 0.3s ease, 
         background-color 0.3s ease, 
-        font-weight: 0.3s ease; 
+        font-weight 0.3s ease; 
     }
 
 .study__contact:hover, 
