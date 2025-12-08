@@ -28,7 +28,7 @@
     });
 
     function displayNextCard() {
-        if (currentIndex < activitiesData.length - 1) {
+        if (currentIndex < activitiesData.length - 5) {
             currentIndex++;
         } else {
             currentIndex = 0;
@@ -40,7 +40,7 @@
         if (currentIndex > 0) {
             currentIndex--;
         } else {
-            currentIndex = activitiesData.length - 1;
+            currentIndex = activitiesData.length - 5;
         }
         scroll();
     }
@@ -48,7 +48,7 @@
     function scroll() {
         track.scrollTo({
             left: currentIndex * (cardWidth + gap),
-            behavior: "smooth",
+            behavior: "auto",
         });
     }
 
