@@ -15,8 +15,8 @@
 <p class="study__para">Moving to Taiwan means opening the door to a rich culture, friendly people, and endless opportunities — and it all begins with learning Mandarin.</p>
 <p class="study__para">We work hand in hand with trusted language schools across Taiwan to help you find the program that truly fits your goals and lifestyle. From your first questions to your first steps in Taiwan, we’re here to make the process smooth and exciting.</p>
     <div class="study__btn">
-        <a href="#" class="study__contact">Contact us</a>
-        <a href="#" class="study__apply">Apply</a>
+        <a href="contact" class="study__contact">Contact us</a>
+        <a href="apply" class="study__apply">Apply</a>
     </div>
 
 </section>
@@ -89,7 +89,7 @@
         cursor: pointer;
         transition: 
         transform 0.3s ease, 
-        background-color: 0.3s ease, 
+        background-color 0.3s ease, 
         font-weight: 0.3s ease; 
     }
 

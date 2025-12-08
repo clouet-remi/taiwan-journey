@@ -3,11 +3,11 @@
 </script>
   <footer class="footer">
         <nav class="footer__nav">
-            <a href="#" class="footer__navlink">FAQ</a>
-            <a href="#" class="footer__navlink">Contact us</a>
-            <a href="#" class="footer__navlink">Privacy policy</a>
-            <a href="#" class="footer__navlink">Terms of use</a>
-            <a href="#" class="footer__navlink">Company details</a>
+            <a href="/faq" class="footer__navlink">FAQ</a>
+            <a href="/contact" class="footer__navlink">Contact us</a>
+            <a href="/privacy-policy" class="footer__navlink">Privacy policy</a>
+            <a href="/terms" class="footer__navlink">Terms of use</a>
+            <a href="company" class="footer__navlink">Company details</a>
         </nav>
         <p class="footer__copyright">© 2025 Taiwan Journey, inc - All rights reserved</p>
     </footer>

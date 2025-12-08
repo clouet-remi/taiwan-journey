@@ -11,11 +11,11 @@
         <h1 class="header__title">Taiwan Journey</h1>
     </div>
     <nav class="header__nav">
-        <a href="#" class="header__navlink">Our schools</a>
-        <a href="#" class="header__navlink">Accomodations</a>
-        <a href="#" class="header__navlink">Activities</a>
-        <a href="#" class="header__navlink">About us</a>
-        <a href="#" class="header__navlink-search">
+        <a href="/our/schools" class="header__navlink">Our schools</a>
+        <a href="/accomodations" class="header__navlink">Accomodations</a>
+        <a href="/activities" class="header__navlink">Activities</a>
+        <a href="about-us" class="header__navlink">About us</a>
+        <a href="search" class="header__navlink-search">
 <Icon icon="lucide:search" width="24" height="24" />        </a>
     </nav>
 </header>
