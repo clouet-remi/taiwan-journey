@@ -63,14 +63,14 @@
     <h3 class="activities__title">Les activités les plus populaires</h3>
 
     <div class="carousel__controls">
-        <button on:click={displayPrevCard}>←</button>
-        <button on:click={displayNextCard}>→</button>
+        <button onclick={displayPrevCard}>←</button>
+        <button onclick={displayNextCard}>→</button>
     </div>
 
     <div class="activities__wrapper">
         <div class="activities__track" bind:this={track}>
             {#each activitiesData as activity, index}
-                <a href="#" target="_blank" 
+                <a href="/activity/:${index}" target="_blank" 
                 class="activity__link"
                 bind:this={firstCard}
                 >
@@ -99,8 +99,9 @@
     <div class="carousel__dots">
         {#each activitiesData as activity, index}
             <span
+                aria-label="go-to-choosen-card-index"
                 class:active={index === currentIndex}
-                on:click={() => goToIndex(index)}
+                onclick={() => goToIndex(index)}
             ></span>
         {/each}
     </div>
