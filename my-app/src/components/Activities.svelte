@@ -4,28 +4,28 @@
     let track;
     let firstCard;
     let currentIndex = $state(0);
-    let cardWidth = $state(0); 
-    let gap = $state(0); 
-    
-    $effect(() => {
-        if (!track) return; 
+    let cardWidth = $state(0);
+    let gap = $state(0);
 
-        const style = getComputedStyle(track); 
-        gap = parseFloat(style.gap) || 0; 
+    $effect(() => {
+        if (!track) return;
+
+        const style = getComputedStyle(track);
+        gap = parseFloat(style.gap) || 0;
 
         const update = () => {
             // offsetWidth pour récupérer la largeur réelle visible à l'écran
-            cardWidth = firstCard.offsetWidth; 
+            cardWidth = firstCard.offsetWidth;
         };
 
-        update(); 
+        update();
 
         // "Surveille l'élém firstCard et s'il est modifié appelle ma fonction update"
-        const resizeObserver = new ResizeObserver(update); 
+        const resizeObserver = new ResizeObserver(update);
         resizeObserver.observe(firstCard);
 
-        return () => resizeObserver.disconnect(); 
-    })
+        return () => resizeObserver.disconnect();
+    });
 
     function displayNextCard() {
         if (currentIndex < activitiesData.length - 1) {
@@ -56,7 +56,6 @@
         currentIndex = index;
         scroll();
     }
-
 </script>
 
 <section class="activities">
@@ -70,9 +69,11 @@
     <div class="activities__wrapper">
         <div class="activities__track" bind:this={track}>
             {#each activitiesData as activity, index}
-                <a href="/activity/:${index}" target="_blank" 
-                class="activity__link"
-                bind:this={firstCard}
+                <a
+                    href="/activity/:${index}"
+                    target="_blank"
+                    class="activity__link"
+                    bind:this={firstCard}
                 >
                     <article class="activity">
                         <div class="activity__img--wrapper">
@@ -98,11 +99,11 @@
 
     <div class="carousel__dots">
         {#each activitiesData as activity, index}
-            <span
-                aria-label="go-to-choosen-card-index"
+            <button
+                aria-label="go-to-choosen-card"
                 class:active={index === currentIndex}
                 onclick={() => goToIndex(index)}
-            ></span>
+            ></button>
         {/each}
     </div>
 </section>
@@ -221,7 +222,8 @@
         gap: 0.5rem;
     }
 
-    .carousel__dots span {
+    .carousel__dots button {
+        all: unset;
         width: 10px;
         height: 10px;
         background: #ccc;
