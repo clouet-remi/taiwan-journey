@@ -221,9 +221,19 @@
         color: var(--light-color);
         height: 2rem;
         width: 2rem;
+        transition: transform 0.2s ease;
+    }
+
+    .carousel__controls button:hover {
+        transform: scale(1.05);
+    }
+
+    .carousel__controls button:active {
+        transform: scale(1.1);
     }
 
     .carousel__dots {
+        width: 100%;
         display: flex;
         justify-content: center;
         margin-top: 1rem;
@@ -232,8 +242,8 @@
 
     .carousel__dots button {
         all: unset;
-        width: 10px;
-        height: 10px;
+        width: 0.5rem;
+        height: 0.5rem;
         background: #ccc;
         border-radius: 50%;
         cursor: pointer;
@@ -242,4 +252,6 @@
     .carousel__dots button.active {
         background: var(--main-theme-color);
     }
+
+
 </style>
