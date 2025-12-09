@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
     import { activitiesData } from "../data/activitiesData";
     import Icon from "@iconify/svelte";
 
-    let track;
-    let firstCard;
+    let track: HTMLDivElement | null = null;
+    let firstCard: HTMLAnchorElement | null = null; 
     let currentIndex = $state(0);
     let cardWidth = $state(0);
     let gap = $state(0);
