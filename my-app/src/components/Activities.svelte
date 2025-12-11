@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { activitiesData } from "../data/activitiesData";
+    import { activitiesData } from "./../backend/data/activities.data"
     import Icon from "@iconify/svelte";
 
     let track: HTMLDivElement | null = null;
