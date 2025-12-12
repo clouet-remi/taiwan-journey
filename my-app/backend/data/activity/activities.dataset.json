@@ -1,0 +1,64 @@
+{
+  "activities": [
+    {
+      "img": "https://images.unsplash.com/photo-1707327085506-c4f31c951a1a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Find in love with our secret hotsprings",
+      "price": 35
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1530324652194-d78318776d5c?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Meditation in a remote temple",
+      "price": 99.9
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1601831753677-01f960be19eb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Tea Ceremony",
+      "price": 60
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1586753080433-3b98668a4085?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Hiking in the central mountains",
+      "price": 150
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1552993873-0dd1110e025f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Explore a Traditional Night Market",
+      "price": 25
+    },
+    {
+      "img": "https://plus.unsplash.com/premium_photo-1661951189203-12decb9d7f8e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Skyline Night View of Taipei",
+      "price": 40
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1624254495476-db6cc8b77e98?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Luxury Glamping in the Mountains",
+      "price": 120
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Surfing Session on the East Coast",
+      "price": 55
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1622136352909-642073a6be1f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Attend an Outdoor Live Concert",
+      "price": 45
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1718641789651-71a0436c8b7e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Dragon Boat Festival Experience",
+      "price": 30
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1678026582164-24a5460c447a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Taste Authentic Xiaolongbao",
+      "price": 18
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1570604127008-f644337cfb8b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Taiwanese Cooking Workshop",
+      "price": 70
+    }
+  ]
+}
