@@ -65,9 +65,9 @@
     <div class="carousel__controls">
         <button onclick={displayPrevCard}>
             <Icon
-                icon="material-symbols:arrow-circle-left-outline-rounded"/></button>
+                icon="material-symbols:keyboard-arrow-left"/></button>
         <button onclick={displayNextCard}>
-            <Icon icon="material-symbols:arrow-circle-right-outline" /></button>
+            <Icon icon="material-symbols:keyboard-arrow-right" /></button>
     </div>
 
     <div class="accommodations__wrapper">
@@ -209,7 +209,7 @@
         display: flex;
         margin-left: auto;
         gap: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .carousel__controls button {
