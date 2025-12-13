@@ -1,6 +1,6 @@
 <script>
 // '$lib' représente le chemin absolu dans SvelteKit
-import {Header, Footer, Services, StudyTaiwan, Activities } from "$lib";
+import {Header, Footer, Services, StudyTaiwan, Activities, Accommodations } from "$lib";
 
 </script>
 
@@ -14,6 +14,7 @@ import {Header, Footer, Services, StudyTaiwan, Activities } from "$lib";
 <StudyTaiwan/>
 <Services/>
 <Activities />
+<Accommodations/>
   </main>
 <Footer />
 
