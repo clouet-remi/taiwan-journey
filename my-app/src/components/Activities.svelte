@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { activitiesData } from "./../data/activities.data"
+    import { activitiesData } from "./../data/activities.dataset.js"
     import Icon from "@iconify/svelte";
 
     let track: HTMLDivElement | null = null;
@@ -145,6 +145,7 @@
     }
 
     .activities__title {
+        font-size: 1.8rem;
         width: 100%;
         padding: var(--base-padding);
     }

@@ -41,7 +41,6 @@ export const activitiesData = [
   },
   {
     img: "/img/activities/concert.jpg",
-    alt: "Live music concert in Taiwan",
     title: "Attend an Outdoor Live Concert",
     price: 45
   },
