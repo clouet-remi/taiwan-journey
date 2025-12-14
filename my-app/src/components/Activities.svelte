@@ -60,7 +60,7 @@
 </script>
 
 <section class="activities">
-    <h3 class="activities__title">Les activités les plus populaires</h3>
+    <h3 class="activities__title">The most popular activities</h3>
 
     <div class="carousel__controls">
         <button onclick={displayPrevCard}>

@@ -4,4 +4,5 @@ export { default as Footer } from '../components/Footer.svelte';
 export { default as Services } from '../components/Services.svelte';
 export { default as StudyTaiwan } from '../components/StudyTaiwan.svelte';
 export { default as Activities } from '../components/Activities.svelte';
-export { default as Accommodations } from '../components/Accommodations.svelte';
+export { default as Accommodations } from '../components/accommodations.svelte';
+export { default as Nav } from '../components/Nav.svelte';

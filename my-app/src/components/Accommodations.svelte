@@ -60,7 +60,7 @@
 </script>
 
 <section class="accommodations">
-    <h3 class="accommodations__title">Logements disponibles à Taïwan</h3>
+    <h3 class="accommodations__title">Available accommodations in Taiwan</h3>
 
     <div class="carousel__controls">
         <button onclick={displayPrevCard}>

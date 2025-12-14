@@ -9,6 +9,7 @@
 
 - Pour visualiser le site en local :
 
-1.  `npm install`
-2. `npm run dev`
+1. Se déplacer dans le dossier `my-app`
+2.  `npm install`
+3. `npm run dev`
 
