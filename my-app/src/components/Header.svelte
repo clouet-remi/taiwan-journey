@@ -1,11 +1,14 @@
 <script>
-
 </script>
 
 <header class="header">
     <div class="header__group">
         <a href="/" class="header__link">
-            <img src="/img/logo-taipei-journey.png" alt="Logo de Taipei Journey" class="header__logo">
+            <img
+                src="/img/logo-taipei-journey.png"
+                alt="Logo de Taipei Journey"
+                class="header__logo"
+            />
         </a>
         <h1 class="header__title">Taiwan Journey</h1>
     </div>
@@ -36,5 +39,4 @@
         color: var(--main-theme-color);
         text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
     }
-
 </style>
