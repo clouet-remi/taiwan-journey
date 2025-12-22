@@ -26,6 +26,7 @@
         justify-content: start;
         align-items: center;
         gap: 1rem;
+        box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .header__logo {

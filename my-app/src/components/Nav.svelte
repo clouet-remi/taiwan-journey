@@ -12,8 +12,6 @@
             // le callback prend un tableau d'entrée car possible d'observer plusieurs éléments
             ([entry]) => {
                 isShrunk = !entry.isIntersecting; 
-                console.log("ma fonction est bien called")
-                console.log(`La valeur de isShrunk vaut ${isShrunk}`)
             }, 
             {
                 // Pour dire observe par rapport au viewport
@@ -54,7 +52,7 @@
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: white;
+        background: rgb(255, 255, 255, 1); 
         padding: 0.5rem 1rem 1rem 1rem;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         transition:
@@ -65,6 +63,7 @@
 
     .nav__container.shrink {
         padding: 0.25rem 1rem;
+        background: rgb(255, 255, 255, 0.8);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
