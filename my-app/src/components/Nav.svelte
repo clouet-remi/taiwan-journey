@@ -108,15 +108,35 @@
         align-items: center;
         justify-content: center;
         background-color: var(--light-color);
-        padding: var(--base-padding);
         border-radius: 50%;
         padding: 0.5rem;
         color: var(--font-color);
         transition: color 0.3s;
+        flex-shrink: 0;
     }
 
     .main-nav__link-search:hover {
         color: var(--main-theme-color);
         transform: scale(1.1);
+    }
+
+        /* Responsive tablette */
+    @media screen and (max-width: 1250px) {
+
+        .main-nav {
+            width: 90%;
+            overflow: hidden;
+            gap: 0.5rem;
+        }
+
+        .main-nav__link {
+            display: inline-flex;
+            align-items: center;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
     }
 </style>

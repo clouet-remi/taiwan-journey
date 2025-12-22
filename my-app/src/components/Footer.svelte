@@ -60,4 +60,12 @@ footer {
     font-style: italic;
 }
 
+    /* Responsive tablette */
+    @media screen and (max-width: 1250px) {
+        .footer__nav {
+            gap: 1rem;
+        }
+    }
+
+
 </style>

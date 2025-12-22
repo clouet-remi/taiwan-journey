@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { activitiesData } from "./../data/activities.dataset.js"
+    import { activitiesData } from "./../data/activities.dataset.js";
     import Icon from "@iconify/svelte";
 
     let track: HTMLDivElement | null = null;
-    let firstCard: HTMLAnchorElement | null = null; 
+    let firstCard: HTMLAnchorElement | null = null;
     let currentIndex = $state(0);
     let cardWidth = $state(0);
     let gap = $state(0);
@@ -64,10 +64,11 @@
 
     <div class="carousel__controls">
         <button onclick={displayPrevCard}>
-            <Icon
-                icon="material-symbols:keyboard-arrow-left"/></button>
+            <Icon icon="material-symbols:keyboard-arrow-left" /></button
+        >
         <button onclick={displayNextCard}>
-            <Icon icon="material-symbols:keyboard-arrow-right" /></button>
+            <Icon icon="material-symbols:keyboard-arrow-right" /></button
+        >
     </div>
 
     <div class="activities__wrapper">
@@ -254,5 +255,24 @@
         background: var(--main-theme-color);
     }
 
+    /* Responsive tablette */
+    @media screen and (max-width: 1250px) {
+        .activity__link {
+            width: 33%;
+            padding: 0.5rem;
+        }
 
+        .activity__img--wrapper {
+            height: 10rem;
+            width: 100%;
+        }
+
+        .activity__img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            /* Pour gérer le problème de pixels généré par object-fit */
+            overflow-clip-margin: unset;
+        }
+    }
 </style>

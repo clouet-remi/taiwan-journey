@@ -112,7 +112,14 @@
     transition: transform 0.5s ease;
 }
 
+ /* Responsive tablette */
+    @media screen and (max-width: 1250px) {
 
+        .services__display {
+            width: 100%;
+        }
+        
+    }
 
 
 

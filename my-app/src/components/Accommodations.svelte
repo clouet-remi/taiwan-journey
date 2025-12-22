@@ -255,5 +255,26 @@
         background: var(--main-theme-color);
     }
 
+        /* Responsive tablette */
+    @media screen and (max-width: 1250px) {
+        .accommodation__link {
+            width: 33%;
+            padding: 0.5rem;
+        }
+
+        .accommodation__img--wrapper {
+            height: 10rem;
+            width: 100%;
+        }
+
+        .accommodation__img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            /* Pour gérer le problème de pixels généré par object-fit */
+            overflow-clip-margin: unset;
+        }
+    }
+
 
 </style>
