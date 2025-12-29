@@ -3,12 +3,11 @@
 </script>
 
 <section class="study">
-    <div class="study__subgroup">
-        <h2 class="study__title">Ready to start a new life in Taiwan ?</h2>
-        <div class="study__title-icon">
-            <Icon icon="mdi:airplane" width="70%" height="70%" color="#fff" />
-        </div>
-    </div>
+        <h2 class="study__title">Ready to start a new life in Taiwan ?
+            <span class="study__title-icon">
+                <Icon icon="mdi:airplane" width="70%" height="70%" color="#fff" />
+            </span>
+        </h2>
     <p class="study__para">
         <span class="study__para-i"
             >Experience a new chapter in one of Asia’s most welcoming
@@ -41,15 +40,8 @@
         padding: 1rem;
     }
 
-    .study__subgroup {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .study__title {
         color: var(--main-theme-color);
-        align-items: center;
         text-align: center;
         font-weight: 900;
         font-size: 4rem;
@@ -59,8 +51,7 @@
 
     .study__title-icon {
         background-color: var(--main-theme-color);
-        flex: 0 0 auto; /* Pas de shrink, pas de grow, taille fixe */
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
@@ -113,6 +104,13 @@
         .study {
             width: 100%;
             gap: 0;
+            padding: 0;
+        }
+
+        .study__title {
+            font-weight: 600;
+            font-size: 2.5rem;
+            padding: 0.5rem;
         }
     }
 </style>

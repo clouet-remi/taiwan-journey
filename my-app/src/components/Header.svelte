@@ -29,6 +29,10 @@
         box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
     }
 
+    .header__link {
+        flex-shrink: 0;
+    }
+
     .header__logo {
         height: 5rem;
         border-radius: 50%;
@@ -39,5 +43,12 @@
         text-align: start;
         color: var(--main-theme-color);
         text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+    }
+
+        /* Responsive mobile */
+    @media screen and (max-width: 500px) {
+        .header__title {
+            line-height: 2rem;
+        }
     }
 </style>
