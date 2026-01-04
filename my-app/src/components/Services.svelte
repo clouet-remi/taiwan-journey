@@ -121,6 +121,14 @@
         
     }
 
+            /* Responsive mobile */
+    @media screen and (max-width: 700px) {
+        
+        .services__text-description, 
+        .services__text-hidden { display: none;}
+
+    }
+
 
 
 

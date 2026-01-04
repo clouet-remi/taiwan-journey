@@ -113,4 +113,15 @@
             padding: 0.5rem;
         }
     }
+
+    
+    /* Responsive mobile */
+    @media screen and (max-width: 500px) {
+
+        .study__btn {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
 </style>

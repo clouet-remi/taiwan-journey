@@ -276,5 +276,20 @@
         }
     }
 
+/* Responsive mobile */
+    @media screen and (max-width: 700px) {
+        .accommodations__title {
+            font-size: 1.5rem;
+        }
+
+        .accommodation__link {
+            width: 50%;
+            padding: 0.5rem;
+        }
+
+        .accommodation__text {
+            font-size: 0.9rem;
+        }
+    }
 
 </style>

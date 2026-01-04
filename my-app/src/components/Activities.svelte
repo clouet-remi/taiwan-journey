@@ -275,4 +275,20 @@
             overflow-clip-margin: unset;
         }
     }
+
+    /* Responsive mobile */
+    @media screen and (max-width: 700px) {
+        .activities__title {
+            font-size: 1.5rem;
+        }
+
+        .activity__link {
+            width: 50%;
+            padding: 0.5rem;
+        }
+
+        .activity__text {
+            font-size: 0.9rem;
+        }
+    }
 </style>
