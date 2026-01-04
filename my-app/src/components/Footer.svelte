@@ -67,5 +67,14 @@ footer {
         }
     }
 
+    /* Responsive mobile */
+    @media screen and (max-width: 700px) {
+        .footer__nav {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            padding: 0;
+        }
+    }
 
 </style>
