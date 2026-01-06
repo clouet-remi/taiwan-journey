@@ -43,8 +43,8 @@
         <Icon icon="eva:menu-fill" width="24" height="24" style="color: #fff" />
     </button>
     <nav class="main-nav" class:is-open={isOpen}>
-        <a href="/our/schools" class="main-nav__link">Our schools</a>
-        <a href="/accomodations" class="main-nav__link">Accomodations</a>
+        <a href="/our-schools" class="main-nav__link">Our schools</a>
+        <a href="/accommodations" class="main-nav__link">Accomodations</a>
         <a href="/activities" class="main-nav__link">Activities</a>
         <a href="about-us" class="main-nav__link">About us</a>
         <a href="search" class="main-nav__link-search">
