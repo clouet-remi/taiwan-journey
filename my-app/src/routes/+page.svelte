@@ -1,13 +1,10 @@
 <script>
   // '$lib' représente le chemin absolu dans SvelteKit
   import {
-    Header,
-    Footer,
     Services,
     StudyTaiwan,
     Activities,
     Accommodations,
-    Nav,
   } from "$lib";
 </script>
 
@@ -15,16 +12,12 @@
   <title>"Taiwan Journey"</title>
 </svelte:head> -->
 
-    <Header />
-    <Nav />
-
   <main class="main">
     <StudyTaiwan />
     <Services />
     <Activities />
     <Accommodations />
   </main>
-  <Footer />
 
 <style>
 
