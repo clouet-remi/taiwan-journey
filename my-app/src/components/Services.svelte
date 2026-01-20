@@ -8,7 +8,7 @@
 
     <a href="/services/learn-chinese" class="services__link">
         <article class="services__article">
-            <img class="services__img" src="img/learn-chinese-calligraphy.jpg" alt="">
+            <img class="services__img" src="img/learn-chinese-calligraphy.webp" alt="">
             <div class="services__text">
                 <h3 class="services__title"><span class="services__title-text">Learn Chinese efficiently with the right method in Taiwan</span></h3>
                     <p class="services__text-description">With a clear, immersive approach, you’ll pick up Chinese faster than you ever thought possible.</p>
@@ -18,7 +18,7 @@
     </a>
     <a href="services/night-market" class="services__link">
         <article class="services__article">
-            <img class="services__img" src="img/taipei-night-market.jpg" alt="">
+            <img class="services__img" src="img/taipei-night-market.webp" alt="">
             <div class="services__text">
                 <h3 class="services__title"><span class="services__title-text">Discover a large panel of activities all over in Taiwan</span></h3>
                     <p class="services__text-description">From mountain trails to night markets and hot springs, you’ll unlock Taiwan’s most unforgettable experiences in seconds.</p>
@@ -28,7 +28,7 @@
     </a>
     <a href="services/house" class="services__link">
         <article class="services__article">
-            <img class="services__img" src="img/modern-house.jpg" alt="">
+            <img class="services__img" src="img/modern-house.webp" alt="">
             <div class="services__text">
                 <h3 class="services__title"><span class="services__title-text">Find your dream house in just a few click in Taiwan !</span></h3>
                     <p class="services__text-description">With smart filtering and personalized selections, finding your perfect Taiwanese home becomes effortless.</p>
